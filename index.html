@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wallet - feildmaster.com</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+    <!-- <script defer src="/__/firebase/8.2.1/firebase-remote-config.js"></script> -->
+    <!-- <script defer src="/__/firebase/8.2.1/firebase-performance.js"></script> -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script type="module" src="./assets/js/modules.js"></script>
+
+    <link href="./assets/css/style.css" media="screen" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <section class="flex-grow">feildmaster.com - Wallet</section>
+      <section>
+        <span id="user" class="authed username"></span>
+        <span id="login" class="unauthed">Log In</span>
+      </section>
+    </header>
+    <article class="authed">
+      <h1>
+        Account History
+        <div class="header-info">FMCoins <span class="currency balance" data-type="FMC">0</span></div>
+      </h1>
+      <section id="history"></section>
+    </article>
+    <template id="userContext">
+      <div>
+        <div class="currency balance" data-type="FMC"></div>
+        <div class="logout">Sign Out</div>
+      </div>
+  </template>
+    <template id="entry">
+      <div class="entry">
+        <div class="memo"></div>
+        <div class="currency"></div>
+        <div class="date"></div>
+      </div>
+    </template>
+  </body>
+</html>
