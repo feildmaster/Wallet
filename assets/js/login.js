@@ -1,3 +1,5 @@
+firebase.app().options_.authDomain = 'auth.feildmaster.com'; // Override the default domain set by firebase
+
 let authedUser = firebase.auth().currentUser;
 
 function updateUser(user) {
