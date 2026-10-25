@@ -79,3 +79,44 @@ body.authed .unauthed {
 body:not(.authed) .authed {
   display: none;
 }
+
+.menu-trigger {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+.menu {
+  position: fixed;
+  inset: auto;
+  top: 56px;
+  right: 12px;
+  margin: 0;
+  min-width: 150px;
+  padding: 6px;
+  background-color: rgb(33, 34, 36);
+  color: white;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 6px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .25);
+}
+.menu .currency {
+  padding: 6px 8px;
+}
+.menu button {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+.menu button:hover,
+.menu button:focus-visible {
+  background-color: rgb(56, 56, 56);
+}

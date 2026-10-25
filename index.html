@@ -20,14 +20,13 @@
     <script type="module" src="https://auth.feildmaster.com/token.js?listen"></script>
 
     <link href="./assets/css/style.css" media="screen" rel="stylesheet"/>
-    <link href="https://unpkg.com/tippy.js@5.2.1/dist/tippy.css" media="screen" rel="stylesheet"/>
   </head>
   <body>
     <header>
       <section class="flex-grow">feildmaster.com - Wallet</section>
       <section>
-        <span id="user" class="authed username"></span>
-        <span id="login" class="unauthed">Log In</span>
+        <button id="user" type="button" popovertarget="userMenu" class="menu-trigger authed username"></button>
+        <button id="login" type="button" popovertarget="loginMenu" class="menu-trigger unauthed">Log In</button>
       </section>
     </header>
     <article class="authed">
@@ -37,12 +36,15 @@
       </h1>
       <section id="history"></section>
     </article>
-    <template id="userContext">
-      <div>
-        <div class="currency balance" data-type="FMC"></div>
-        <div class="logout">Sign Out</div>
-      </div>
-  </template>
+    <div id="userMenu" popover class="menu">
+      <div class="currency balance" data-type="FMC">0</div>
+      <button type="button" class="logout">Sign Out</button>
+    </div>
+    <div id="loginMenu" popover class="menu">
+      <button type="button" data-provider="google">Google</button>
+      <button type="button" data-provider="github">Github</button>
+      <button type="button" data-provider="discord">Discord</button>
+    </div>
     <template id="entry">
       <div class="entry">
         <div class="memo"></div>
