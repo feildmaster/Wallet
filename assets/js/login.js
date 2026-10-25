@@ -12,7 +12,7 @@ function updateUser(user) {
   
   document.querySelector('body').classList.toggle('authed', !isGuest)
 
-  document.querySelectorAll('.username').forEach(el => el.innerHTML = displayName);
+  document.querySelectorAll('.username').forEach(el => el.textContent = displayName);
 }
 
 function loginError(error) {
