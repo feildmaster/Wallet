@@ -101,6 +101,9 @@ body:not(.authed) .authed {
   border-radius: 6px;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .25);
 }
+.menu [hidden] {
+  display: none;
+}
 .menu .currency {
   padding: 6px 8px;
 }
@@ -119,4 +122,64 @@ body:not(.authed) .authed {
 .menu button:hover,
 .menu button:focus-visible {
   background-color: rgb(56, 56, 56);
+}
+dialog {
+  width: min(360px, calc(100vw - 32px));
+  margin: auto;
+  padding: 0;
+  background-color: rgb(33, 34, 36);
+  color: white;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .5);
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, .6);
+}
+.dialog-body {
+  padding: 20px 24px;
+}
+dialog h2 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+.dialog-note {
+  margin-bottom: 14px;
+  font-size: smaller;
+  opacity: 0.7;
+}
+.linked-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 38px;
+}
+.linked-row .provider-name {
+  flex: 1;
+}
+.linked-row .status {
+  font-size: smaller;
+  opacity: 0.7;
+}
+dialog button {
+  padding: 4px 12px;
+  background: none;
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+dialog button:hover,
+dialog button:focus-visible {
+  background-color: rgb(56, 56, 56);
+}
+.link-error {
+  padding-top: 8px;
+  font-size: smaller;
+  color: rgb(255, 120, 120);
+}
+.dialog-actions {
+  margin-top: 16px;
+  text-align: right;
 }

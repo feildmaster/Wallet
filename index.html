@@ -38,6 +38,7 @@
     </article>
     <div id="userMenu" popover class="menu">
       <div class="currency balance" data-type="FMC">0</div>
+      <button type="button" class="open-linked">Linked accounts</button>
       <button type="button" class="logout">Sign Out</button>
     </div>
     <div id="loginMenu" popover class="menu">
@@ -45,6 +46,31 @@
       <button type="button" data-provider="github">Github</button>
       <button type="button" data-provider="discord">Discord</button>
     </div>
+    <dialog id="linkedDialog" aria-labelledby="linkedTitle">
+      <div class="dialog-body">
+        <h2 id="linkedTitle">Linked accounts</h2>
+        <p class="dialog-note">Link the accounts you sign in with, even if they use different email addresses, and they all open this same wallet.</p>
+        <div class="linked-row" data-provider="google">
+          <span class="provider-name">Google</span>
+          <span class="status" hidden>Linked</span>
+          <button type="button" class="link" hidden>Link</button>
+        </div>
+        <div class="linked-row" data-provider="github">
+          <span class="provider-name">Github</span>
+          <span class="status" hidden>Linked</span>
+          <button type="button" class="link" hidden>Link</button>
+        </div>
+        <div class="linked-row" data-provider="discord">
+          <span class="provider-name">Discord</span>
+          <span class="status" hidden>Linked</span>
+          <button type="button" class="link" hidden>Link</button>
+        </div>
+        <div class="link-error" role="alert" hidden></div>
+        <form method="dialog" class="dialog-actions">
+          <button type="submit">Close</button>
+        </form>
+      </div>
+    </dialog>
     <template id="entry">
       <div class="entry">
         <div class="memo"></div>
