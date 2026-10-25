@@ -24,6 +24,7 @@ tippy('#login', {
     [
       ['Google', auth.google],
       ['Github', auth.github],
+      ['Discord', auth.discord],
     ].forEach(([title, fn]) => {
       const el = document.createElement('div');
       el.textContent = title;

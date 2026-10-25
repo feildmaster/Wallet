@@ -66,6 +66,9 @@ function github() {
   // provider.addScope(); // https://developer.github.com/apps/building-oauth-apps/scopes-for-oauth-apps/
   login(provider);
 }
+function discord() {
+  window.open(`https://auth.feildmaster.com/discord?origin=${encodeURIComponent(location.origin)}`, 'auth', 'height=800,width=400');
+}
 
 firebase.auth().onAuthStateChanged(updateUser);
 
@@ -74,8 +77,9 @@ firebase.auth().getRedirectResult().catch(loginError);
 const auth = {
   google,
   github,
-  // twitter,
-  // facebook,
+  twitter,
+  facebook,
+  discord,
   // email,
   // phone,
   logout,
