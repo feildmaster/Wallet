@@ -97,7 +97,7 @@ function loadWallet(user) {
   }, console.error));
   // TODO: Cache and limit by timestamp updates
   transactions = ref.collection('transactions')
-    .where('status', 'in', ['completed', 'canceled'])
+    .where('status', 'in', ['completed', 'canceled', 'refunded'])
     .orderBy('date', 'desc')
     .limit(PAGE_SIZE);
   let initialized = false;
